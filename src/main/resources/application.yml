@@ -1,0 +1,35 @@
+spring:
+ application:
+  name: Haito
+  
+ h2:
+  console:
+   enabled: true
+   settings:
+    web-allow-others: true
+   path: /h2-console
+ 
+ jpa:
+  hibernate:
+   ddl-auto: create
+   use-new-id-generator-mappings: false
+  show-sql: true
+  defer-datasource-initialization: true
+  
+ datasource:
+  driver-class-name: org.h2.Driver
+  url: jdbc:h2:mem:dayone;DB_CLOSE_DELAY=-1
+  username: sa
+  password:
+  
+ redis:
+  host: localhost
+  port: 6379 
+  
+ jwt:
+  secret: emVyb2Jhc2UtaGFpdG8tc3ByaW5nLWJvb3QtZGl2aWRlbmQtcHJvamVjdC1qd3Qtc2VyZXRrZXkK
+   
+scheduler:
+ scrape:
+   dividend-history: "0 0 0 * * *" 
+    
